@@ -50,11 +50,12 @@ class BackendList:
         if self.currCount >= len(self.initialServers):
             self.currCount += 1
             self.currentPort += 1
-            serv = ('127.0.0.1', self.currentPort)
-            newWorker = Server(self.currentPort)
-            
-            self.extendedServers.append(serv)
-            self.extendedWorkers.append(newWorker)
+            if(len(self.extendedWorkers) < 30):
+                serv = ('127.0.0.1', self.currentPort)
+                newWorker = Server(self.currentPort)
+
+                self.extendedServers.append(serv)
+                self.extendedWorkers.append(newWorker)
             return serv
         else:
             serv = self.initialServers[ self.currCount ]
