@@ -33,7 +33,7 @@ class BackendList:
             srv = Server(portNum)
             self.initialWorkers.append(srv)
     
-    # MASIH BELUM KEPAKE
+    # MASIH BELUM DIPAKAI
     # def disconnectWorkers(self, index: int):
     #     # close the extended workers connection
     #     for worker in self.extendedWorkers:
@@ -44,7 +44,7 @@ class BackendList:
         
     #     # reset the state
     #     self.currCount = 0
-        self.currentPort = 8887
+    #     self.currentPort = 8887
 
     def getServer(self):
         if self.currCount >= len(self.initialServers):
