@@ -33,16 +33,17 @@ class BackendList:
             srv = Server(portNum)
             self.initialWorkers.append(srv)
     
-    def disconnectWorkers(self, index: int):
-        # close the extended workers connection
-        for worker in self.extendedWorkers:
-            worker.close()
-        # pop all server from extended server list
-        for n in self.extendedServers:
-            self.extendedServers.pop()
+    # MASIH BELUM KEPAKE
+    # def disconnectWorkers(self, index: int):
+    #     # close the extended workers connection
+    #     for worker in self.extendedWorkers:
+    #         worker.close()
+    #     # pop all server from extended server list
+    #     for n in self.extendedServers:
+    #         self.extendedServers.pop()
         
-        # reset the state
-        self.currCount = 0
+    #     # reset the state
+    #     self.currCount = 0
         self.currentPort = 8887
 
     def getServer(self):
