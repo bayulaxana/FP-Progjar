@@ -27,7 +27,7 @@ class BackendList:
         self.currCount = 0
         self.currentPort = 8887
 
-        # initiate initial workers (8887, 8888, 8889)
+        # initiate initial workers (8887)
         for server in self.initialServers:
             portNum = server[1]
             srv = Server(portNum)
